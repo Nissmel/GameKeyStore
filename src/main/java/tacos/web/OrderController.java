@@ -41,9 +41,6 @@ public class OrderController {
     if (order.getDeliveryName() == null) {
       order.setDeliveryName(user.getFullname());
     }
-    if (order.getCustomerDeliveryMail() == null) {
-      order.setCustomerDeliveryMail(user.getStreet());
-    }
     return "orderForm";
   }
 

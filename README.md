@@ -19,7 +19,15 @@ Celem projektu jest stworzenie sklepu internetowego na w frameworku Spring. Sprz
 Wersja w wykonaniau Kanclerza [tutaj](https://github.com/jkanclerz/car-rental-spring/tree/master/src/main/java/pl/jkan/przelewy24
 )
 
+5.~~rejestracja~~
 
+6.~~logowanie~~
+
+7.~~strona główna~~ 
+
+8.możliwość zakupu
+
+9.wysłanie klucz do kupującego 
 
 
 

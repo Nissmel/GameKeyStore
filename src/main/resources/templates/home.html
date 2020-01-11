@@ -2,16 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" 
       xmlns:th="http://www.thymeleaf.org">
   <head>
-    <title>Taco Cloud</title>
+    <title>Home for your games</title>
+    <link rel="stylesheet" href="/styles.css">
   </head>
   
   <body>
-    <h1>Welcome to...</h1>
-    <img th:src="@{/images/TacoCloud.png}"/>
-    <form method="POST" th:action="@{/logout}" id="logoutForm">
-      <input type="submit" value="Logout"/>
-    </form>
-    
-    <a th:href="@{/design}" id="design">Design a taco</a>
+  <form method="POST" th:action="@{/logout}" id="logoutForm">
+    <input type="submit" value="Logout" class="myButtonLogout"/>
+  </form>
+
+  <div class="center_credential">
+    <h2>Login to buy your chosen game</h2>
+    <a th:href="@{/design}" id="design">Login</a>
+  </div>
   </body>
 </html>

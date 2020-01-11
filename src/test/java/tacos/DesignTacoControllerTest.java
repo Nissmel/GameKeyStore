@@ -85,7 +85,7 @@ public class DesignTacoControllerTest {
     	));
 
     when(userRepository.findByUsername("testuser"))
-    		.thenReturn(new User("testuser", "testpass", "Test User", "123 Street", "Someville", "CO", "12345", "123-123-1234"));
+    		.thenReturn(new User("testuser", "testpass", "Test User"));
   }
 
   @Test
@@ -108,7 +108,7 @@ public class DesignTacoControllerTest {
         .thenReturn(design);
     
     when(userRepository.findByUsername("testuser"))
-	.thenReturn(new User("testuser", "testpass", "Test User", "123 Street", "Someville", "CO", "12345", "123-123-1234"));
+	.thenReturn(new User("testuser", "testpass", "Test User"));
 
     mockMvc.perform(post("/design").with(csrf())
         .content("name=Test+Taco&ingredients=FLTO,GRBF,CHED")

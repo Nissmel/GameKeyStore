@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <title>Taco Cloud</title>
     <link rel="stylesheet" th:href="@{/styles.css}" />
   </head>
@@ -9,7 +10,6 @@
   <body>
     <h1>Choose game you want to buy</h1>
     <h2>They can be all yours, <span th:text="${user.fullname}">NAME</span>!</h2>
-    <img th:src="@{/images/TacoCloud.png}"/>
 
     <form method="POST" th:action="@{/logout}" id="logoutForm">
       <input type="submit" value="Logout"/>
