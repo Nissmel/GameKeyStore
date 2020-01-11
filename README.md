@@ -5,15 +5,17 @@ Celem projektu jest stworzenie sklepu internetowego na w frameworku Spring. Sprz
 **formatowanie tego pliku [instrukja](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)**
 
 ## TODO
-1. nazwa sklepu
+1. ~~nazwa sklepu~~ BarKey
 
-2. baza  danych:
+2. ~~logosklepu~~ 
+
+3. baza  danych:
    - *GamesAlavaible (ID_Game, Id_Key, GameName)*
    - *GamesSold (ID_Game, Id_Key, GameName,Date)*
    - *Clients (ID_Client, Email, Name, SurrName)*
    - *Transaction (ID_Game, ID_Client, ID_Key, Date, IsPaymentValid)* 
    
-3.instalacja [Przelewy24](https://www.przelewy24.pl/dla-firm/instalacja)
+4.instalacja [Przelewy24](https://www.przelewy24.pl/dla-firm/instalacja)
 Wersja w wykonaniau Kanclerza [tutaj](https://github.com/jkanclerz/car-rental-spring/tree/master/src/main/java/pl/jkan/przelewy24
 )
 

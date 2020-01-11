@@ -27,3 +27,16 @@ div.ingredient-group {
 span.validationError {
 	color: red;
 }
+
+.center_logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 50%;
+}
+.center_login {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
