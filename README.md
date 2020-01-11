@@ -30,5 +30,7 @@ Wersja w wykonaniau Kanclerza [tutaj](https://github.com/jkanclerz/car-rental-sp
 9.wysłanie klucz do kupującego 
 
 
+![alt text](https://github.com/Nissmel/GameKeyStore/src/main/resources/static/images/screenshots/Homepage.png)
+
 ![photo](https://github.com/Nissmel/GameKeyStore/src/main/resources/static/images/screenshots/Homepage.png)
 
