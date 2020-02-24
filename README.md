@@ -29,7 +29,7 @@ Wersja w wykonaniau Kanclerza [tutaj](https://github.com/jkanclerz/car-rental-sp
 
 9.możliwość zakupu
 
-10. płatność
+10.płatność
 
 11.wysłanie klucz do kupującego 
 
