@@ -31,4 +31,6 @@ Wersja w wykonaniau Kanclerza [tutaj](https://github.com/jkanclerz/car-rental-sp
 
 
 ![photo](https://github.com/Nissmel/GameKeyStore/blob/master/src/main/resources/static/images/screenshots/Homepage.png)
+![photo](https://github.com/Nissmel/GameKeyStore/blob/master/src/main/resources/static/images/screenshots/Products.png)
+
 
