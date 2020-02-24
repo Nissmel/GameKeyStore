@@ -3,76 +3,62 @@
       xmlns:th="http://www.thymeleaf.org">
   <head>
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-    <title>Taco Cloud</title>
-    <link rel="stylesheet" th:href="@{/styles.css}" />
+    <title>Select games to buy</title>
+    <link rel="stylesheet" href="/styles.css">
   </head>
 
   <body>
+  <form method="POST" th:action="@{/logout}" id="logoutForm">
+    <input type="submit" value="Logout" class="myButtonLogout"/>
+  </form>
+  <div class="top">
     <h1>Choose game you want to buy</h1>
     <h2>They can be all yours, <span th:text="${user.fullname}">NAME</span>!</h2>
+  </div>
 
-    <form method="POST" th:action="@{/logout}" id="logoutForm">
-      <input type="submit" value="Logout"/>
-    </form>
+    <form th:method="POST" th:object="${design}" th:action="@{/design}" id="gameForm">
 
-    <form th:method="POST" th:object="${design}" th:action="@{/design}" id="tacoForm">
-
-    <span class="validationError"
-          th:if="${#fields.hasErrors('ingredients')}"
-          th:errors="*{ingredients}">Ingredient Error</span>
+    <span class="validationError" th:if="${#fields.hasErrors('ingredients')}" th:errors="*{ingredients}">Shop Error</span>
 
     <div class="grid">
-      <div class="ingredient-group" id="wraps">
-      <h3>Designate your wrap:</h3>
-      <div th:each="ingredient : ${wrap}">
+
+      <h1>Shooters:</h1>
+      <div th:each="ingredient : ${shooter}">
         <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
         <span th:text="${ingredient.name}">INGREDIENT</span><br/>
-      </div>
       </div>
 
-	  <div class="ingredient-group" id="proteins">
-      <h3>Pick your protein:</h3>
-      <div th:each="ingredient : ${protein}">
+      <h1>Role playing game:</h1>
+      <div th:each="ingredient : ${rpg}">
         <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
         <span th:text="${ingredient.name}">INGREDIENT</span><br/>
-      </div>
       </div>
 
-	  <div class="ingredient-group" id="cheeses">
-      <h3>Choose your cheese:</h3>
-      <div th:each="ingredient : ${cheese}">
+      <h1>Race:</h1>
+      <div th:each="ingredient : ${race}">
         <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
         <span th:text="${ingredient.name}">INGREDIENT</span><br/>
-      </div>
       </div>
 
-	  <div class="ingredient-group" id="veggies">
-      <h3>Determine your veggies:</h3>
-      <div th:each="ingredient : ${veggies}">
+      <h1>Strategy:</h1>
+      <div th:each="ingredient : ${strategy}">
         <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
         <span th:text="${ingredient.name}">INGREDIENT</span><br/>
-      </div>
       </div>
 
-	  <div class="ingredient-group" id="sauces">
-      <h3>Select your sauce:</h3>
-      <div th:each="ingredient : ${sauce}">
+      <h1>Multiplayers:</h1>
+      <div th:each="ingredient : ${multiplayer}">
         <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
         <span th:text="${ingredient.name}">INGREDIENT</span><br/>
       </div>
-      </div>
-      </div>
+    </div>
 
       <div>
-
-
-      <h3>Name your taco creation:</h3>
-      <input type="text" th:field="*{name}"/>
-      <span class="validationError" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</span>
-      <br/>
-
-      <button>Submit your taco</button>
+      <button>Submit and buy selected products</button>
       </div>
+
+
+
     </form>
   </body>
 </html>

@@ -15,9 +15,9 @@
         <span th:text="${order.placedAt}">DATE</span> -
         <span th:text="${order.deliveryName}">NAME</span>
         <ul>
-          <li th:each="taco : ${order.tacos}">
-            <span th:text="${taco.name}"></span> : 
-            <span th:each="ingredient : ${taco.ingredients}">
+          <li th:each="GameKeyShopingForm : ${order.GameKeyShopingForm}">
+            <span th:text="${GameKeyShopingForm.name}"></span> :
+            <span th:each="ingredient : ${GameKeyShopingForm.ingredients}">
               <span th:text="${ingredient.name}">INGREDIENT</span>,
             </span>
           </li>
