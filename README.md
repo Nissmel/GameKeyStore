@@ -9,10 +9,10 @@ Celem projektu jest stworzenie sklepu internetowego na w frameworku Spring. Sprz
 
 2. ~~logosklepu~~ 
 
-3. ~~baza  danych:
-   ~~- *GamesAlavaible (ID_Game, Id_Key, GameName)*
-   ~~- *GamesSold (ID_Game, Id_Key, GameName,Date)*
-   ~~- *Clients (ID_Client, Email, Name, SurrName)*
+3. ~~baza  danych~~
+   ~~- *GamesAlavaible (ID_Game, Id_Key, GameName)*~~
+   ~~- *GamesSold (ID_Game, Id_Key, GameName,Date)*~~
+   ~~- *Clients (ID_Client, Email, Name, SurrName)*~~
    ~~- *Transaction (ID_Game, ID_Client, ID_Key, Date, IsPaymentValid)*~~
    
 4.instalacja [Przelewy24](https://www.przelewy24.pl/dla-firm/instalacja)
