@@ -1,64 +1,72 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-  <head>
+<head>
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <title>Select games to buy</title>
     <link rel="stylesheet" href="/styles.css">
-  </head>
+</head>
 
-  <body>
-  <form method="POST" th:action="@{/logout}" id="logoutForm">
+<body>
+<form method="POST" th:action="@{/logout}" id="logoutForm">
     <input type="submit" value="Logout" class="myButtonLogout"/>
-  </form>
-  <div class="top">
+</form>
+<div class="top">
     <h1>Choose game you want to buy</h1>
-    <h2>They can be all yours, <span th:text="${user.fullname}">NAME</span>!</h2>
-  </div>
+</div>
 
-    <form th:method="POST" th:object="${design}" th:action="@{/design}" id="gameForm">
+<form th:method="POST" th:object="${design}" th:action="@{/orders}" id="designForm">
 
-    <span class="validationError" th:if="${#fields.hasErrors('ingredients')}" th:errors="*{ingredients}">Shop Error</span>
+    <span class="validationError" th:if="${#fields.hasErrors('ingredients')}"
+          th:errors="*{ingredients}">Shop Error</span>
 
     <div class="grid">
 
-      <h1>Shooters:</h1>
-      <div th:each="ingredient : ${shooter}">
-        <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
-        <span th:text="${ingredient.name}">INGREDIENT</span><br/>
-      </div>
+        <div class="ingredient-group" id="shooter">
+            <h1>Shooters:</h1>
+            <div th:each="ingredient : ${shooter}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span><br/>
+            </div>
+        </div>
 
-      <h1>Role playing game:</h1>
-      <div th:each="ingredient : ${rpg}">
-        <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
-        <span th:text="${ingredient.name}">INGREDIENT</span><br/>
-      </div>
+        <div class="ingredient-group" id="rpg">
+            <h1>Role playing game:</h1>
+            <div th:each="ingredient : ${rpg}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span><br/>
+            </div>
+        </div>
 
-      <h1>Race:</h1>
-      <div th:each="ingredient : ${race}">
-        <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
-        <span th:text="${ingredient.name}">INGREDIENT</span><br/>
-      </div>
+        <div class="ingredient-group" id="race">
+            <h1>Race:</h1>
+            <div th:each="ingredient : ${race}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span><br/>
+            </div>
+        </div>
 
-      <h1>Strategy:</h1>
-      <div th:each="ingredient : ${strategy}">
-        <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
-        <span th:text="${ingredient.name}">INGREDIENT</span><br/>
-      </div>
+        <div class="ingredient-group" id="strategy">
+            <h1>Strategy:</h1>
+            <div th:each="ingredient : ${strategy}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span><br/>
+            </div>
+        </div>
 
-      <h1>Multiplayers:</h1>
-      <div th:each="ingredient : ${multiplayer}">
-        <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
-        <span th:text="${ingredient.name}">INGREDIENT</span><br/>
-      </div>
+        <div class="ingredient-group" id="multiplayer">
+            <h1>Multiplayers:</h1>
+            <div th:each="ingredient : ${multiplayer}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span><br/>
+            </div>
+        </div>
     </div>
 
-      <div>
-      <button>Submit and buy selected products</button>
-      </div>
+
+        <input type="submit" value="Buy" class="myButton"/>
 
 
-
-    </form>
-  </body>
+</form>
+</body>
 </html>

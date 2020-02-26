@@ -15,7 +15,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class GameKeyShopingForm {
+public class GameKeyShoppingForm {
 
   @Id
   @GeneratedValue(strategy=GenerationType.AUTO)

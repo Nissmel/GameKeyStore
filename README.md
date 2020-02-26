@@ -16,7 +16,7 @@ Celem projektu jest stworzenie sklepu internetowego na w frameworku Spring. Sprz
    ~~- *Transaction (ID_Game, ID_Client, ID_Key, Date, IsPaymentValid)*~~
    
 4.instalacja [Przelewy24](https://www.przelewy24.pl/dla-firm/instalacja)
-Wersja w wykonaniau Kanclerza [tutaj](https://github.com/jkanclerz/car-rental-spring/tree/master/src/main/java/pl/jkan/przelewy24
+Wersja z zajęć [tutaj](https://github.com/jkanclerz/car-rental-spring/tree/master/src/main/java/pl/jkan/przelewy24
 )
 
 5.~~rejestracja~~
@@ -27,11 +27,11 @@ Wersja w wykonaniau Kanclerza [tutaj](https://github.com/jkanclerz/car-rental-sp
 
 8.~~dodanie produktów do zakupu~~ 
 
-9.możliwość zakupu
+9.~~możliwość zakupu~~
 
-10.płatność
+10.~~płatność~~
 
-11.wysłanie klucz do kupującego 
+11.wyświetlenie kluczy dla kupującego 
 
 
 ![photo](https://github.com/Nissmel/GameKeyStore/blob/master/src/main/resources/static/images/screenshots/Homepage.png)

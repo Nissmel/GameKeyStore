@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
-import game.GameKeyShopingForm;
+import game.GameKeyShoppingForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -53,19 +53,19 @@ public class GameListController {
   }
   
   @ModelAttribute(name = "design")
-  public GameKeyShopingForm design() {
-    return new GameKeyShopingForm();
+  public GameKeyShoppingForm design() {
+    return new GameKeyShoppingForm();
   }
   
   @GetMapping
   public String showDesignForm(Model model, Principal principal) {
-    List<GameKey> games = new ArrayList<>();
-    gamesRepo.findAll().forEach(i -> games.add(i));
+    List<GameKey> ingredients = new ArrayList<>();
+    gamesRepo.findAll().forEach(i -> ingredients.add(i));
     
     Type[] types = GameKey.Type.values();
     for (Type type : types) {
       model.addAttribute(type.toString().toLowerCase(), 
-          filterByType(games, type));
+          filterByType(ingredients, type));
     }
     
     String username = principal.getName();
@@ -77,14 +77,14 @@ public class GameListController {
 
   @PostMapping
   public String processDesign(
-          @Valid GameKeyShopingForm GameKeyShopingForm, Errors errors,
+          @Valid GameKeyShoppingForm GameKeyShoppingForm, Errors errors,
           @ModelAttribute Order order) {
     
     if (errors.hasErrors()) {
       return "design";
     }
 
-    GameKeyShopingForm saved = tacoRepo.save(GameKeyShopingForm);
+    GameKeyShoppingForm saved = tacoRepo.save(GameKeyShoppingForm);
     order.addDesign(saved);
 
     return "redirect:/orders/current";
