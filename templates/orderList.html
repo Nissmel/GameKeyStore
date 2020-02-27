@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Stuff that was ordered</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+
+  <body>
+  <div class="center_credit">
+    <h1>Your orders</h1>
+
+    <ul>
+      <li th:each="order : ${orders}">
+        Date of order:
+        <span th:text="${order.placedAt}"></span>
+        <br>
+        Email of ordering person:
+        <span th:text="${order.deliveryName}"></span>
+        <br>
+        Paid with:
+        <span th:text="${order.ccNumber}"></span>
+        <br>
+
+        <ul>
+          <li th:each="GameKeyShoppingForm : ${order.GameKeyShoppingForm}">
+            <span th:text="${GameKeyShoppingForm.name}"></span> :
+            <span th:each="ingredient : ${GameKeyShoppingForm.ingredients}">
+              <span th:text="${ingredient.name}">INGREDIENT</span>,
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  </body>
+
+</html>

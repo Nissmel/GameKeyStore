@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" 
       xmlns:th="http://www.thymeleaf.org">
   <head>
-    <title>Taco Cloud</title>
-    <link rel="stylesheet" th:href="@{/styles.css}" />
+    <title>Stuff that was ordered</title>
+    <link rel="stylesheet" href="/styles.css">
   </head>
 
   <body>
-  <div class="center_credential">
+  <div class="center_credit">
     <h1>Your orders</h1>
 
     <ul>
@@ -15,7 +15,7 @@
         Date of order:
         <span th:text="${order.placedAt}"></span>
         <br>
-        Name of ordering person:
+        Email of ordering person:
         <span th:text="${order.deliveryName}"></span>
         <br>
         Paid with:

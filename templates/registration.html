@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>BarKey registration</title>
+      <link rel="stylesheet" href="/styles.css">
+
+  </head>
+  
+  <body>
+  <img src="/images/Logo.png" class="center_logo">
+    <form method="POST" th:action="@{/register}" id="registerForm" class="center_registration">
+    
+        <label for="username">Username: </label>
+        <input type="text" name="username"/><br/>
+
+        <label for="password">Password: </label>
+        <input type="password" name="password"/><br/>
+
+        <label for="confirm">Confirm password: </label>
+        <input type="password" name="confirm"/><br/>
+    
+        <input type="submit" value="Register" class="myButton"/>
+    </form>
+    
+  </body>
+</html>

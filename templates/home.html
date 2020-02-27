@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Home for your games</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  
+  <body>
+  <form method="POST" th:action="@{/logout}" id="logoutForm">
+    <input type="submit" value="Logout" class="myButtonLogout"/>
+  </form>
+
+  <div class="center_credential">
+    <h2>Login to buy your chosen game</h2>
+    <a th:href="@{/design}" id="design">Login</a>
+  </div>
+  </body>
+</html>
